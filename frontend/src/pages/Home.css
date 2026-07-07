@@ -1,0 +1,31 @@
+.home-container button {
+  padding: 12px 25px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px; /* pill shape */
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Hover effect */
+.home-container button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+}
+
+/* Click effect */
+.home-container button:active {
+  transform: scale(0.95);
+}
+
+/* Optional: outline glow */
+.home-container button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
