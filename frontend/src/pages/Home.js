@@ -5,14 +5,40 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Exam Registration System</h1>
-      <h2>Welcome to the Exam Registration System</h2>
-       
+    <div className="home">
 
-      <button onClick={() => navigate("/login")}>Login</button>
-      <br /><br />
-      <button onClick={() => navigate("/register")}>Register</button>
+      <header className="header">
+        <div className="logo">
+          🎓 Exam Portal
+        </div>
+
+        <nav>
+          <a href="/">Home</a>
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </nav>
+      </header>
+
+      <section className="hero">
+
+        <h1>Online Exam Registration System</h1>
+
+        <p>
+          Register for university examinations quickly and securely.
+        </p>
+
+        <div className="buttons">
+          <button onClick={() => navigate("/login")}>
+            Login
+          </button>
+
+          <button onClick={() => navigate("/register")}>
+            Register
+          </button>
+        </div>
+
+      </section>
+
     </div>
   );
 }

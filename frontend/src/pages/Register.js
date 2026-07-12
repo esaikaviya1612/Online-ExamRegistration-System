@@ -27,27 +27,43 @@ function Register() {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+  <div className="register-page">
+    <div className="register-container">
+
+      <h2>📝 Student Registration</h2>
+      <p>Create your account to register for exams</p>
 
       <input
-        placeholder="Name"
-        onChange={e => setData({ ...data, name: e.target.value })}
+        type="text"
+        placeholder="Full Name"
+        onChange={(e) =>
+          setData({ ...data, name: e.target.value })
+        }
       />
 
       <input
-        placeholder="Email"
-        onChange={e => setData({ ...data, email: e.target.value })}
+        type="email"
+        placeholder="Email Address"
+        onChange={(e) =>
+          setData({ ...data, email: e.target.value })
+        }
       />
 
       <input
+        type="password"
         placeholder="Password"
-        onChange={e => setData({ ...data, password: e.target.value })}
+        onChange={(e) =>
+          setData({ ...data, password: e.target.value })
+        }
       />
 
-      <button onClick={handleSubmit}>Register</button>
+      <button onClick={handleSubmit}>
+        Register
+      </button>
+
     </div>
-  );
+  </div>
+);
 }
 
 export default Register;

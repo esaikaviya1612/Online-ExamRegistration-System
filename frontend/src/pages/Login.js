@@ -27,12 +27,15 @@ function Login() {
   };
 
   return (
+  <div className="login-page">
     <div className="login-container">
-      <h2>Login</h2>
+
+      <h2>🔐 Student Login</h2>
+      <p>Login to access your exam dashboard</p>
 
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email Address"
         onChange={(e) =>
           setData({ ...data, email: e.target.value })
         }
@@ -46,9 +49,25 @@ function Login() {
         }
       />
 
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin}>
+        Login
+      </button>
+
+      <div className="login-footer">
+        <p>
+          Don't have an account?{" "}
+          <span
+            className="register-link"
+            onClick={() => navigate("/register")}
+          >
+            Register
+          </span>
+        </p>
+      </div>
+
     </div>
-  );
+  </div>
+);
 }
 
 export default Login;
